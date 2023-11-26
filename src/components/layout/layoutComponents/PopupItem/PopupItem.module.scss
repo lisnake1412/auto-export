@@ -1,0 +1,29 @@
+.wrapper{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 0px;
+    cursor: click;
+    color: rgb(22, 24, 35);
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.container {
+    padding: 10px 8px 10px 16px;
+    color: rgb(22, 24, 35);
+    display: flex;
+    align-items: center;
+    cursor: click;
+}
+
+.icon {
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 8px;
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    font-size: 19px;
+}

@@ -1,0 +1,78 @@
+.wrapper {
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 4px;    
+    background-color: transparent;
+   
+    +.wrapper {
+        margin-left:16px;
+    }
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 50%;
+    }
+}
+
+.icon + .content , .content + .icon {
+    margin-left: 8px;
+}
+
+//Button styles
+.primary {
+    background-color: var(--primaryColor);
+    color: rgba(255, 255, 255, 1);
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)),#FE2C55;
+    }
+}
+
+.outline {
+    border: 0.8px solid var(--primaryColor);
+    border-radius: 2px;
+    background-color: transparent;
+    color: var(--primaryColor);
+    &:hover {
+        background-color: rgba(254, 44, 85, 0.08);
+    }
+}
+
+.text {
+    min-width: 110px;
+    padding: 0px 16px !important;
+    height: 36px;
+    border: 1px solid rgba(22, 24, 35, 0.12);
+    border-radius: 2px;
+    color: rgba(22, 24, 35, 1);
+    &:hover {
+        background-color: rgba(22, 24, 35, .03);
+    }
+}
+
+//Button size
+.small {
+    padding: 1px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    height: 36px;
+    min-width: 96px;
+}
+
+.medium {
+    min-height: 36px;
+    min-width: 100px;
+    padding: 6px 8px;
+    font-size:16px;
+    font-weight: 700;
+    letter-spacing: 0.03px;
+}
+
+.big {
+    width: 100%;
+    min-width: 168px;
+    min-height: 48px;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 600;
+}

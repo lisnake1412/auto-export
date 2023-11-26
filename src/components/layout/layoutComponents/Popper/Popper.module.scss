@@ -1,0 +1,22 @@
+.wrapper {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 12px;
+    border-radius: 8px;
+    max-height: min((100vh - 96px) - 60px, 760px);
+    min-height: 100px;
+    overflow: hidden;
+    
+}
+
+.popup {
+    font-weight: 570;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.03px;
+    padding: 0px 0px;
+    margin: 0px;
+    min-width: 223px;
+    overflow: hidden;
+    cursor:click;
+}

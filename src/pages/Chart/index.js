@@ -32,24 +32,15 @@ const CHART_DATAs = [
     
 ];
 
-const max_column_value = 300;
 
-let getColumnArray = () => {
-    let index = 0;
-    let returnArray = [];
-    while (index * 50 <= max_column_value) {
-        returnArray[index] = index * 50;
-        index++
-    }
-    return returnArray;
-};
-let column_array = getColumnArray()
+
+
 
 
 
 function Chart() {
     const [dataList, setDataList] = useState([])
-
+    const [max_column_value, setColumnLenght] = useState(300)
     function addMoreColumn() {
         let coinName = document.getElementById("coinName").value
         let coinValue = document.getElementById("coinValue").value
@@ -68,10 +59,19 @@ function Chart() {
             )
         })
     }
+    let getColumnArray = () => {
+        let index = 0;
+        let returnArray = [];
+        while (index * 50 <= max_column_value) {
+            returnArray[index] = index * 50;
+            index++
+        }
+        return returnArray;
+    };
+    let column_array = getColumnArray()
     function deleteLastColumn() {
         setDataList(prev => prev.slice(0, -1))
     }
-    console.log(dataList)
     return (
         <>
             <div className={cx('input-wrapper')}>
@@ -84,6 +84,12 @@ function Chart() {
                 <br></br>
                 <button onClick={() => addMoreColumn()}>Thêm</button>
                 <button onClick={() => deleteLastColumn()}>Xóa</button>
+                <br/>
+                <p>_______________________</p>
+                <br/>
+                <p>Điều chỉnh độ cao cột</p>
+                <button onClick={() => setColumnLenght(prev => prev - 50)}>{'<'}</button>
+                <button onClick={() => setColumnLenght(prev => prev + 50)}>{'>'}</button>
             </div>
             <div className={cx('wrapper')}>
                 <h2>tổng kết lợi nhuận</h2>

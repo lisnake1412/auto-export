@@ -1,7 +1,8 @@
 .wrapper {
     margin: 20px;
     padding: 20px;
-    width: fit-content;
+    width: min-content;
+    height: min-content;
     background-image: url(../../assets/Bg.png);
     background-size: cover;
     > h2 {
@@ -37,7 +38,7 @@
     border-top: transparent;
     border-right: transparent;
     min-width: 300px;
-    width: min-content;
+    height: min-content;
     aspect-ratio: 4/3;
     
     padding-right: 30px;

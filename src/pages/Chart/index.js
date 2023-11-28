@@ -72,6 +72,7 @@ function Chart() {
     function deleteLastColumn() {
         setDataList(prev => prev.slice(0, -1))
     }
+    const currentDate = new Date()
     return (
         <>
             <div className={cx('input-wrapper')}>
@@ -93,6 +94,7 @@ function Chart() {
             </div>
             <div className={cx('wrapper')}>
                 <h2>tổng kết lợi nhuận</h2>
+                <h3>{`ngày ${currentDate.getDate()}/${currentDate.getMonth()}/${currentDate.getFullYear()} `}</h3>
                 <div className={cx('content')}>
                     <div className={cx('percent-column')}>
                         {column_array.map((data, index) => {

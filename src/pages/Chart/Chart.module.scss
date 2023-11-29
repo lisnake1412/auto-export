@@ -1,6 +1,7 @@
 .wrapper {
     margin: 20px;
     padding: 20px;
+    padding-bottom: 50px;
     width: min-content;
     height: min-content;
     background-image: url(../../assets/Bg.png);
@@ -32,6 +33,31 @@
     }
     > button {
         margin-right: 10px;
+    }
+}
+
+.long-short {
+    position: absolute;
+    right: 0;
+    top:0;
+    display: grid;
+    grid-template-columns: 50px 50px;
+    column-gap: 10px;
+    align-items: center;
+    > div {
+        display: inline-block;
+        background-color: #2fa338;
+        width: 50px;
+        height: 6px;
+        border-radius: 10px;
+    }
+    .short {
+        background-color: var(--colorRed1);
+    }
+    > span {
+        font-size: 1rem;
+        opacity: 0.7;
+        text-transform: uppercase;
     }
 }
 
